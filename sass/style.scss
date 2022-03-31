@@ -1,3 +1,7 @@
-@use "sass/base";
-@use "sass/components";
-@use "sass/layout";
+// @use "sass/base/_index.scss";
+// @use "sass/components/_index.scss";
+// @use "sass/layout/_index.scss";
+
+body {
+  background-color: hotpink;
+}
