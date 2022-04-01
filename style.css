@@ -1,8 +1,53 @@
+h1{
+  color: #ffffff;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
+}
+.wrapper{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 2rem 4rem;
+  gap: 2rem;
+}
+body{
+  background-color: rgb(29, 26, 26);
+}
+.text{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.button{
+  font-size: 20px;
+  color: #ffffff;
+  border-radius: 25px;
+  background-color: rgb(29, 26, 26);
+  box-shadow: 1px 1px 8px 3px rgb(50 52 53) inset;
+  padding: .75rem;
+  width: 40%;
+}
+.input{
+  background-color: rgb(29, 26, 26);
+  box-shadow: 1px 1px 9px 12px rgb(50 52 53) inset;
+  border-radius: 25px;
+}
+.border {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(./img/leaf.svg);
+  border-image-slice: 75%;
+  border-image-repeat: round;
+}
+form{
+  padding: 1rem;
+}
+li{
+  list-style: none;
+  padding: .5rem 0;
 }
