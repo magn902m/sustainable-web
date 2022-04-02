@@ -1,3 +1,5 @@
+// GET
+
 export async function get(endpoint, apikey) {
   const respone = await fetch(endpoint, {
     method: "get",
@@ -10,6 +12,8 @@ export async function get(endpoint, apikey) {
   return data;
 }
 
+// GET API
+
 export async function getCarbonApi(carbonApi) {
   const respone = await fetch(carbonApi);
   const data = await respone.json();
@@ -17,10 +21,12 @@ export async function getCarbonApi(carbonApi) {
   return data;
 }
 
-export function build(dataArr) {
-  dataArr.forEach((item) => {
-    // document.querySelector("#alcohol_menu_section .section_wrapper").innerHTML = "";
+// BUILD
 
+export function build(dataArr) {
+  document.querySelector("#data_input_section .section_wrapper").innerHTML = "";
+
+  dataArr.forEach((item) => {
     const clone = document.querySelector("template#api_data").content.cloneNode(true);
 
     // set clone data
@@ -39,8 +45,6 @@ export function build(dataArr) {
 
 // POST
 
-// window.post = post;
-// document.querySelector("button").addEventListener("click", post);
 export async function post(endpoint, apikey) {
   const dataObj = {
     company: "Company",
@@ -50,18 +54,6 @@ export async function post(endpoint, apikey) {
     cleanerThen: 0.5,
     grams_co2: 0.8,
   };
-
-  // fetch(endpoint, {
-  //   method: "post",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     "x-apikey": apikey,
-  //   },
-  //   body: JSON.stringify(data),
-  // })
-  //   .then((res) => res.json())
-  //   .then((data) => console.log(data));
-  // get();
 
   const respone = await fetch(endpoint, {
     method: "post",
@@ -73,49 +65,53 @@ export async function post(endpoint, apikey) {
   });
 
   const data = await respone.json();
+  console.log(data);
 
   return data;
 }
 
 // DELETE
 
-window.deleteIt = deleteIt;
-// https://frontend-54ac.restdb.io/rest/alcohol-menu find id´s here
-function deleteIt() {
-  const id = "62456f5409b5f71a001af410";
-  fetch(`${endpoint}/${id}`, {
+export async function deleteIt(endpoint, apikey) {
+  const id = "6248adb009b5f71a001b8631";
+  const respone = await fetch(`${endpoint}/${id}`, {
     method: "delete",
     headers: {
       "x-apikey": apikey,
     },
-  })
-    .then((res) => res.json())
-    .then((data) => console.log(data));
-  get();
+  });
+
+  const data = await respone.json();
+  console.log(data);
+
+  return data;
 }
 
 // PUT
 
-window.put = put;
-function put() {
-  let data = {
-    name: "Magnus Special",
-    alcohol_free: true,
-    price: 75,
-    image: "magnus_special.jpg",
+export async function put(endpoint, apikey) {
+  const dataObj = {
+    company: "Cool company",
+    industry: "Food",
+    url: "www.cool-food.com",
+    green: false,
+    cleanerThen: 0.6,
+    grams_co2: 0.3,
   };
 
-  const id = "6245727b09b5f71a001af4e4";
-  fetch(`${endpoint}/${id}`, {
+  const id = "6248ad9a09b5f71a001b8630";
+
+  const respone = await fetch(`${endpoint}/${id}`, {
     method: "put",
     headers: {
       "Content-Type": "application/json",
       "x-apikey": apikey,
     },
-    body: JSON.stringify(data),
-  })
-    .then((d) => d.json())
-    .then((t) => console.log(t));
-}
+    body: JSON.stringify(dataObj),
+  });
 
-get();
+  const data = await respone.json();
+  console.log(data);
+
+  return data;
+}
