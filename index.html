@@ -7,45 +7,61 @@
     <link rel="stylesheet" href="style.css" />
     <title>Sustainable web</title>
   </head>
+
   <body>
-    <!-- <img src="./img/leaf.svg" alt="leaf"> -->
-    <div id="app" class="wrapper">
-        <div class="text">
-          <h1>PLEASE FILL IN THE FORM WITH YOUR DATA</h1>
-          <form action="">
-            <input class="button" type="submit" value="Submit">
-          </form>
-        </div>
-        <div class="input border">
-          <form>
-        <ul>
-          <li><label for="url">URL</label></li>
-          <li><input type="text" id="url" name="url"></li>
-          <li><label for="industry">INDUSTRY</label></li>
-          <li>
-            <select name="industry" id="industry">
-              <option value="none"></option>
-              <option value="land">Landbrug/Fødevareproduktion</option>
-              <option value="finans">Den finansielle sektor</option>
-              <option value="mode">Tøj- og modebranchen</option>
-              <option value="tech">Tech- og databranchen</option>
-              <option value="byg">Bygge- og anlægsbranchen</option>
-              <option value="trans">Transportsektoren</option>
-              <option value="kult">Kultur, sport og underholdningsbranche</option>
-              <option value="hotel">Hotel- og restaurationsbranchen</option>
-              <option value="energi">Energisektoren</option>
-              <option value="dag">Dagligvarehandlen</option>
-            </select>
-          </li>
-          <li><label for="country">COUNTRY</label></li>
-          <li><input type="text" id="country" name="country"></li>
-        </ul>
-      </form>
-      <form action="">
-        <input class="button1" type="submit" value="Submit">
-      </form>
-          </div>
+    <div class="loading hide">
+      <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+      </div>
     </div>
+
+    <div class="wrapper">
+      <div class="input border">
+        <h1>HOW GREEN IS YOUR SITE?</h1>
+        <form>
+          <ul>
+            <li><label for="url">URL</label></li>
+            <li><input type="text" id="url" name="url" /></li>
+            <li><label for="industry">INDUSTRY</label></li>
+            <li>
+              <select name="industry" id="industry">
+                <option value="none"></option>
+                <option value="land">Landbrug/Fødevareproduktion</option>
+                <option value="finans">Den finansielle sektor</option>
+                <option value="mode">Tøj- og modebranchen</option>
+                <option value="tech">Tech- og databranchen</option>
+                <option value="byg">Bygge- og anlægsbranchen</option>
+                <option value="trans">Transportsektoren</option>
+                <option value="kult">Kultur, sport og underholdningsbranche</option>
+                <option value="hotel">Hotel- og restaurationsbranchen</option>
+                <option value="energi">Energisektoren</option>
+                <option value="dag">Dagligvarehandlen</option>
+              </select>
+            </li>
+          </ul>
+        </form>
+
+        <button type="submit">CALCULATE</button>
+      </div>
+    </div>
+
+    <div class="leafs">
+      <img class="one" src="img/leaf.svg" alt="" />
+      <img class="two" src="img/leaf.svg" alt="" />
+      <img class="three" src="img/leaf.svg" alt="" />
+
+      <img class="four" src="img/leaf.svg" alt="" />
+      <img class="five" src="img/leaf.svg" alt="" />
+      <img class="six" src="img/leaf.svg" alt="" />
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
