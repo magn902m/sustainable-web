@@ -7,22 +7,81 @@
 }
 
 body {
-  margin-top: 4.5rem;
+  // margin-top: 4.5rem;
   background-color: base.$grey;
   display: flex;
   justify-content: center;
+  padding-top: 5rem;
 }
 
-#leafs {
+.loading {
+  background-color: base.$grey;
   position: absolute;
-  z-index: -1;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 95%;
+
+  .middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  .bar {
+    width: 20px;
+    height: 150px;
+    background: base.$white;
+    display: inline-block;
+    transform-origin: bottom center;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    animation: loader 1.2s linear infinite;
+  }
+  .bar1 {
+    animation-delay: 0.1s;
+  }
+  .bar2 {
+    animation-delay: 0.2s;
+  }
+  .bar3 {
+    animation-delay: 0.3s;
+  }
+  .bar4 {
+    animation-delay: 0.4s;
+  }
+  .bar5 {
+    animation-delay: 0.5s;
+  }
+  .bar6 {
+    animation-delay: 0.6s;
+  }
+  .bar7 {
+    animation-delay: 0.7s;
+  }
+  .bar8 {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes loader {
+    0% {
+      transform: scaleY(0.1);
+    }
+    50% {
+      transform: scaleY(1);
+      background: base.$green;
+    }
+    100% {
+      transform: scaleY(0.1);
+      background: transparent;
+    }
+  }
 }
 
-#app {
-  text-align: center;
-  color: #ffffff;
-  margin-top: 60px;
-  width: 30vw;
+.hide {
+  display: none;
 }
 
 .wrapper {
@@ -32,6 +91,10 @@ body {
   border-radius: 50px;
   background: #242424;
   box-shadow: 13px 13px 18px #151515, -13px -13px 18px #333333;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 60px;
+  width: 30vw;
 
   li {
     list-style: none;
@@ -40,6 +103,11 @@ body {
   ul {
     padding-inline-start: 0px;
   }
+}
+
+.leafs {
+  position: absolute;
+  z-index: -1;
 }
 
 @media only screen and (max-width: 730px) {
