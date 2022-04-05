@@ -9,29 +9,33 @@
   </head>
 
   <body>
-    <div class="loading hide">
-      <div class="middle">
-        <div class="bar bar1"></div>
-        <div class="bar bar2"></div>
-        <div class="bar bar3"></div>
-        <div class="bar bar4"></div>
-        <div class="bar bar5"></div>
-        <div class="bar bar6"></div>
-        <div class="bar bar7"></div>
-        <div class="bar bar8"></div>
+    <main>
+      <div class="loading hide">
+        <div class="middle">
+          <div class="bar bar1"></div>
+          <div class="bar bar2"></div>
+          <div class="bar bar3"></div>
+          <div class="bar bar4"></div>
+          <div class="bar bar5"></div>
+          <div class="bar bar6"></div>
+          <div class="bar bar7"></div>
+          <div class="bar bar8"></div>
+        </div>
       </div>
-    </div>
 
-    <div class="wrapper">
-      <div class="input border">
-        <h1>HOW GREEN IS YOUR SITE?</h1>
-        <form>
-          <ul>
-            <li><label for="url">URL</label></li>
-            <li><input type="text" id="url" name="url" /></li>
-            <li><label for="industry">INDUSTRY</label></li>
-            <li>
-              <select name="industry" id="industry">
+      <section id="form_section">
+        <article class="input border">
+          <form>
+            <legend>
+              <h1>HOW GREEN IS YOUR SITE?</h1>
+            </legend>
+            <div class="form-group">
+              <label for="url">URL</label>
+              <input type="text" id="url" name="url" required />
+            </div>
+            <div class="form-group">
+              <label for="industry">INDUSTRY</label>
+              <select name="industry" id="industry" required>
                 <option value="none"></option>
                 <option value="land">Landbrug/Fødevareproduktion</option>
                 <option value="finans">Den finansielle sektor</option>
@@ -44,24 +48,22 @@
                 <option value="energi">Energisektoren</option>
                 <option value="dag">Dagligvarehandlen</option>
               </select>
-            </li>
-          </ul>
-        </form>
+            </div>
+            <button type="submit">CALCULATE</button>
+          </form>
+        </article>
+      </section>
 
-        <button type="submit">CALCULATE</button>
+      <div class="leafs">
+        <img class="one" src="img/leaf.svg" alt="" />
+        <img class="two" src="img/leaf.svg" alt="" />
+        <img class="three" src="img/leaf.svg" alt="" />
+
+        <img class="four" src="img/leaf.svg" alt="" />
+        <img class="five" src="img/leaf.svg" alt="" />
+        <img class="six" src="img/leaf.svg" alt="" />
       </div>
-    </div>
-
-    <div class="leafs">
-      <img class="one" src="img/leaf.svg" alt="" />
-      <img class="two" src="img/leaf.svg" alt="" />
-      <img class="three" src="img/leaf.svg" alt="" />
-
-      <img class="four" src="img/leaf.svg" alt="" />
-      <img class="five" src="img/leaf.svg" alt="" />
-      <img class="six" src="img/leaf.svg" alt="" />
-    </div>
-
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
