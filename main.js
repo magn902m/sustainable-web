@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", setup);
 
 function setup() {
   regBtn();
-  buildList();
+  // buildList();
 }
 
 async function buildList() {
@@ -25,16 +25,18 @@ async function buildList() {
 
 // window.regBtn = regBtn;
 async function regBtn() {
-  const btnPost = document.querySelector("#post");
-  // const btnPut = document.querySelector("#put");
-  // const btnDelete = document.querySelector("#delete");
+  const btnPost = document.querySelector("[type='submit']");
 
-  btnPost.addEventListener("click", () => {
+  btnPost.addEventListener("submit", () => {
+    e.preventDefault();
     const dataObj = submitData(obj);
     post(endpoint, apikey, dataObj);
     window.location = "results.html?id=";
     buildList();
   });
+
+  // const btnPut = document.querySelector("#put");
+  // const btnDelete = document.querySelector("#delete");
   // btnPut.addEventListener("click", () => {
   //   put(endpoint, apikey);
   //   buildList();
