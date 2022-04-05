@@ -1,0 +1,97 @@
+#leafs {
+  width: 100%;
+
+  .one {
+    position: absolute;
+    width: 10vw;
+    transform: rotate(110deg);
+    left: 58rem;
+    top: 5rem;
+  }
+
+  .two {
+    position: absolute;
+    width: 13vw;
+    transform: rotate(60deg);
+    left: 55rem;
+    top: -4rem;
+  }
+
+  .three {
+    position: absolute;
+    width: 10vw;
+    transform: rotate(10deg);
+    left: 49rem;
+    top: -6rem;
+  }
+
+  .four {
+    position: absolute;
+    width: 10vw;
+    transform: rotate(170deg);
+    left: 34rem;
+    top: 31rem;
+  }
+
+  .five {
+    position: absolute;
+    width: 14vw;
+    transform: rotate(220deg);
+    left: 24rem;
+    top: 26rem;
+  }
+
+  .six {
+    position: absolute;
+    width: 10vw;
+    transform: rotate(290deg);
+    left: 23rem;
+    top: 21rem;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  #leafs {
+    .one {
+      width: 8vw;
+      transform: rotate(110deg);
+      left: 58rem;
+      top: 5rem;
+    }
+
+    .two {
+      width: 11vw;
+      transform: rotate(60deg);
+      left: 55rem;
+      top: -4rem;
+    }
+
+    .three {
+      width: 8vw;
+      transform: rotate(10deg);
+      left: 49rem;
+      top: -6rem;
+    }
+
+    .four {
+      width: 10vw;
+      transform: rotate(170deg);
+      left: 34rem;
+      top: 31rem;
+    }
+
+    .five {
+      width: 14vw;
+      transform: rotate(220deg);
+      left: 24rem;
+      top: 26rem;
+    }
+
+    .six {
+      width: 10vw;
+      transform: rotate(290deg);
+      left: 23rem;
+      top: 21rem;
+    }
+  }
+}

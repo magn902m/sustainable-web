@@ -1,8 +1,8 @@
 /* Index page */
-h1{
+/* h1{
   color: #ffffff;
-}
-#app {
+} */
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,65 +10,65 @@ h1{
   color: #ffffff;
   margin-top: 60px;
 }
-.wrapper{
+.wrapper {
   display: grid;
   grid-template-columns: 50% 50%;
   padding: 2rem 4rem;
   gap: 2rem;
 }
-body{
+body {
   background-color: rgb(29, 26, 26);
 }
-.text{
-display: flex;
-flex-direction: column;
-justify-content: space-around;
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.button{
+.button {
   font-size: 20px;
   color: #ffffff;
   border-radius: 25px;
   background-color: rgb(29, 26, 26);
   box-shadow: 1px 1px 8px 3px rgb(50 52 53) inset;
-  padding: .75rem;
+  padding: 0.75rem;
   width: 40%;
 }
-.button1{
+.button1 {
   font-size: 20px;
   color: #ffffff;
   border-radius: 25px;
   background-color: rgb(29, 26, 26);
   box-shadow: 1px 1px 8px 3px rgb(50 52 53) inset;
-  padding: .75rem;
+  padding: 0.75rem;
   margin-bottom: 1rem;
   width: 40%;
   visibility: hidden;
 }
-.input{
+.input {
   background-color: rgb(29, 26, 26);
   box-shadow: 1px 1px 9px 12px rgb(50 52 53) inset;
   border-radius: 25px;
 }
-li{
+li {
   list-style: none;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
-ul{
+ul {
   padding-inline-start: 0px;
 }
 @media only screen and (max-width: 730px) {
-  .wrapper{
+  .wrapper {
     display: grid;
     grid-template-columns: 100%;
     gap: 0;
   }
-  .button{
+  .button {
     visibility: hidden;
   }
-  .button1{
+  .button1 {
     visibility: visible;
   }
-}
+} */
 /*.cover-img{
   display: flex;
   width: 20%;
@@ -84,7 +84,7 @@ ul{
 } */
 
 /* Result page */
-.result{
+/* .result {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,18 +130,18 @@ ul{
   position: absolute;
   top: 25%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); */
 
-  /* Text */
-  display: flex;
+/* Text */
+/* display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 25%;
   box-sizing: border-box;
-}
+} */
 
 /* procentage lines */
-.lines{ 
+/* .lines {
   display: flex;
   flex-direction: row;
   margin-top: 2rem;
@@ -151,18 +151,18 @@ ul{
 .video,
 .texts,
 .grid,
-.css{
+.css {
   padding: 1rem;
   width: 3rem;
-}
-.line{
+} */
+/* .line {
   z-index: -1;
   height: 10rem;
-  /* background-color: #2dc444; */
+  background-color: #2dc444;
   background-color: #89af8f;
   border-radius: 25px;
 }
-.fill{
+.fill {
   z-index: 2;
   position: absolute;
   width: inherit;
@@ -171,8 +171,8 @@ ul{
   background: #2dc444;
   border-radius: 25px;
 }
-p{
+p {
   display: flex;
   justify-content: center;
-  color:#ffffff;
-}
+  color: #ffffff;
+} */
