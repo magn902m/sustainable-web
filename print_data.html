@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <label
+          >Whats your URL?
+          <input type="url" name="site" data-input="url_input" />
+        </label>
+        <label
+          >Company
+          <input type="text" name="site" data-input="company_input" />
+        </label>
+        <label
+          >Industry
+          <input type="text" name="site" data-input="industry_input" />
+        </label>
+        <button type="button">Send</button>
+      </form>
+
+      <button type="button" id="post">Post</button>
+      <button type="button" id="put">Put</button>
+      <button type="button" id="delete">Delete</button>
+
+      <section id="data_input_section">
+        <article class="section_wrapper"></article>
+      </section>
+    </main>
+
+    <template id="api_data">
+      <h2 data-field="company">Company</h2>
+      <a href="" data-field="url"></a>
+      <h3 data-field="industry">Industry</h3>
+      <p data-field="green">Green</p>
+      <p data-field="cleanerThen">Cleaner then</p>
+      <p data-field="grams_co2">Grams co2</p>
+    </template>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
