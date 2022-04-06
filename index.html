@@ -10,7 +10,7 @@
 
   <body>
     <main>
-      <div class="loading hide">
+      <!-- <div class="loading hide">
         <div class="middle">
           <div class="bar bar1"></div>
           <div class="bar bar2"></div>
@@ -21,19 +21,22 @@
           <div class="bar bar7"></div>
           <div class="bar bar8"></div>
         </div>
-      </div>
+      </div> -->
 
       <section id="form_section">
         <article class="input border">
           <form>
             <legend>
-              <h1>HOW GREEN IS YOUR SITE?</h1>
+              <h1>
+                HOW GREEN IS <br />
+                YOUR SITE?
+              </h1>
             </legend>
-            <div class="form-group">
+            <div class="form_group">
               <label for="url">URL</label>
               <input type="text" id="url" name="url" required />
             </div>
-            <div class="form-group">
+            <div class="form_group">
               <label for="industry">INDUSTRY</label>
               <select name="industry" id="industry" required>
                 <option value="none"></option>
@@ -54,15 +57,17 @@
         </article>
       </section>
 
-      <div class="leafs">
+      <section class="upper_leafs">
         <img class="one" src="img/leaf.svg" alt="" />
         <img class="two" src="img/leaf.svg" alt="" />
         <img class="three" src="img/leaf.svg" alt="" />
+      </section>
 
+      <section class="lower_leafs">
         <img class="four" src="img/leaf.svg" alt="" />
         <img class="five" src="img/leaf.svg" alt="" />
         <img class="six" src="img/leaf.svg" alt="" />
-      </div>
+      </section>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
