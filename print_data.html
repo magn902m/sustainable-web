@@ -11,17 +11,17 @@
       <form action="">
         <label
           >Whats your URL?
-          <input type="url" name="site" data-input="url_input" />
+          <input type="text" id="url" name="url" required />
         </label>
-        <label
+        <!-- <label
           >Company
           <input type="text" name="site" data-input="company_input" />
-        </label>
+        </label> -->
         <label
           >Industry
-          <input type="text" name="site" data-input="industry_input" />
+          <input name="industry" id="industry" required />
         </label>
-        <button type="button">Send</button>
+        <button type="submit" id="send">Send</button>
       </form>
 
       <button type="button" id="post">Post</button>
@@ -37,12 +37,12 @@
     </main>
 
     <template id="api_data">
-      <h2 data-field="company">Company</h2>
+      <!-- <h2 data-field="company">Company</h2> -->
       <a href="" data-field="url"></a>
       <h3 data-field="industry">Industry</h3>
-      <p data-field="green">Green</p>
+      <!-- <p data-field="green">Green</p>
       <p data-field="cleanerThen">Cleaner then</p>
-      <p data-field="grams_co2">Grams co2</p>
+      <p data-field="grams_co2">Grams co2</p> -->
     </template>
 
     <script type="module" src="/main.js"></script>
