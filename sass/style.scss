@@ -10,6 +10,10 @@ body {
   background-color: base.$grey;
 }
 
+main {
+  overflow: hidden;
+}
+
 // .loading {
 //   background-color: base.$grey;
 //   position: absolute;
@@ -83,8 +87,8 @@ body {
 #form_section {
   position: absolute;
   z-index: 10;
-  top: 16vh;
-  left: 8.5vw;
+  top: 10vh;
+  left: 10vw;
 
   article {
     padding: 2rem;
@@ -106,7 +110,7 @@ body {
 
 @media only screen and (min-width: 800px) {
   #form_section {
-    top: 16vh;
+    top: 9vh;
     left: 23vw;
 
     article {
