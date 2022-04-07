@@ -8,7 +8,6 @@ export async function get(endpoint, apikey) {
     },
   });
   const data = await respone.json();
-
   return data;
 }
 
@@ -16,21 +15,20 @@ export async function get(endpoint, apikey) {
 
 export async function post(endpoint, apikey, payload) {
   //Object
-  console.log("payload", payload);
+  console.log("post payload", payload);
 
   const respone = await fetch(endpoint, {
     method: "post",
     headers: {
-      "Content-Type": "application/json",
       "x-apikey": apikey,
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   });
 
   const data = await respone.json();
   console.log(data);
-
-  // return data;
+  // buildList();
 }
 
 // DELETE
@@ -45,8 +43,7 @@ export async function deleteIt(endpoint, apikey, id) {
 
   const data = await respone.json();
   console.log(data);
-
-  return data;
+  buildList();
 }
 
 // PUT
@@ -72,6 +69,5 @@ export async function put(endpoint, apikey, id) {
 
   const data = await respone.json();
   console.log(data);
-
-  return data;
+  buildList();
 }
