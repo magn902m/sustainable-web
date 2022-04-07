@@ -2,12 +2,20 @@
 
 export async function getCarbonApi(url) {
   console.log(url);
-  const carbonApi = "https://kea-alt-del.dk/websitecarbon/site/?url=";
+  const carbonApi = `https://kea-alt-del.dk/websitecarbon/site/?url=https://${url}`;
 
-  const response = await fetch(carbonApi + url);
+  // const response = await fetch(carbonApi);
+  const response = await fetch(url);
   const data = await response.json();
 
-  return data;
+  const cleanData = {
+    url: data.url,
+    industry: industry.value,
+    cleanerThan: data.cleanerThan * 100,
+    grams_co2: data.statistics.co2.grid.grams + data.statistics.co2.renewable.grams,
+  };
+
+  return cleanData;
 }
 
 // GET PageSpeed API
@@ -18,8 +26,16 @@ export async function getPageSpeedApi(url) {
 
   const pageSpeedURL = pageSpeedApi.replace("URLREPLACE", url);
 
-  const response = await fetch(pageSpeedURL);
+  console.log(url);
+  // const response = await fetch(pageSpeedURL);
+  const response = await fetch(url);
   const data = await response.json();
 
-  return data;
+  const cleanData = {
+    images: data.lighthouseResult.audits["resource-summary"].details.items.find(
+      (obj) => obj.resourceType === "image"
+    ).requestCount,
+  };
+
+  return cleanData;
 }

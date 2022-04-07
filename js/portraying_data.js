@@ -5,12 +5,18 @@ export function build(item) {
 
   // set clone data
   // clone.querySelector("[data-field=company]").textContent = item.company;
-  clone.querySelector("[data-field=url]").textContent = item.url;
+  // clone.querySelector("[data-field=url]").textContent = item.url;
   // clone.querySelector("[data-field=url]").setAttribute("herf", item.url);
-  clone.querySelector("[data-field=industry]").textContent = `${item.industry}`;
+  // clone.querySelector("[data-field=industry]").textContent = `${item.industry}`;
   // clone.querySelector("[data-field=green]").textContent = `${item.green}`;
   // clone.querySelector("[data-field=cleanerThen]").textContent = `${item.cleanerThen}%`;
   // clone.querySelector("[data-field=grams_co2]").textContent = `${item.grams_co2} grams`;
+
+  clone.querySelector("[data-field=url]").textContent = item.url;
+  clone.querySelector("[data-field=industry]").textContent = `${item.industry}`;
+  clone.querySelector("[data-field=green_than]").textContent = `${item.cleanerThan}`;
+  clone.querySelector("[data-field=grams_co2]").textContent = `${item.grams_co2} grams`;
+  clone.querySelector("[data-field=images]").textContent = `${item.images} Images`;
 
   // append clone to list
   document.querySelector("template#api_data").appendChild(clone);
