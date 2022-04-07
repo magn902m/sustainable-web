@@ -1,97 +1,139 @@
-.leafs {
-  width: 100%;
+img {
+  width: 5rem;
+}
 
+.upper_leafs {
   .one {
     position: absolute;
-    width: 10vw;
+    width: 13vw;
     transform: rotate(110deg);
-    left: 58rem;
-    top: 5rem;
+    left: 80vw;
+    top: 14vh;
   }
 
   .two {
     position: absolute;
-    width: 13vw;
+    width: 19vw;
     transform: rotate(60deg);
-    left: 55rem;
-    top: -4rem;
+    left: 73vw;
+    top: 5vh;
   }
 
   .three {
     position: absolute;
-    width: 10vw;
+    width: 15vw;
     transform: rotate(10deg);
-    left: 49rem;
-    top: -6rem;
+    left: 62vw;
+    top: 3vh;
   }
+}
 
+.lower_leafs {
   .four {
     position: absolute;
-    width: 10vw;
+    width: 13vw;
     transform: rotate(170deg);
-    left: 34rem;
-    top: 31rem;
+    left: 23vw;
+    top: 59vh;
   }
 
   .five {
     position: absolute;
-    width: 14vw;
+    width: 19vw;
     transform: rotate(220deg);
-    left: 24rem;
-    top: 26rem;
+    left: 4vw;
+    top: 55vh;
   }
 
   .six {
     position: absolute;
-    width: 10vw;
+    width: 15vw;
     transform: rotate(290deg);
-    left: 23rem;
-    top: 21rem;
+    left: 6vw;
+    top: 50vh;
   }
 }
 
-@media only screen and (max-width: 730px) {
-  #leafs {
+@media only screen and (min-width: 800px) {
+  .upper_leafs {
     .one {
-      width: 8vw;
-      transform: rotate(110deg);
-      left: 58rem;
-      top: 5rem;
+      width: 10vw;
+      left: 76vw;
+      top: 10vh;
     }
 
     .two {
-      width: 11vw;
-      transform: rotate(60deg);
-      left: 55rem;
-      top: -4rem;
+      width: 13vw;
+      left: 73vw;
+      top: 0vh;
     }
 
     .three {
-      width: 8vw;
-      transform: rotate(10deg);
-      left: 49rem;
-      top: -6rem;
+      width: 10vw;
+      left: 64vw;
+      top: 1vh;
     }
+  }
 
+  .lower_leafs {
     .four {
       width: 10vw;
-      transform: rotate(170deg);
-      left: 34rem;
-      top: 31rem;
+      left: 31vw;
+      top: 53vh;
     }
 
     .five {
       width: 14vw;
-      transform: rotate(220deg);
-      left: 24rem;
-      top: 26rem;
+      left: 18vw;
+      top: 49vh;
     }
 
     .six {
       width: 10vw;
-      transform: rotate(290deg);
-      left: 23rem;
-      top: 21rem;
+      left: 16vw;
+      top: 44vh;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .upper_leafs {
+    .one {
+      width: 10vw;
+      left: 65vw;
+      top: 18vh;
+    }
+
+    .two {
+      width: 13vw;
+      left: 62vw;
+      top: -1vh;
+    }
+
+    .three {
+      width: 10vw;
+      left: 55vw;
+      top: 1vh;
+    }
+  }
+
+  .lower_leafs {
+    .four {
+      width: 10vw;
+      left: 37vw;
+      top: 67vh;
+    }
+
+    .five {
+      width: 14vw;
+      left: 25vw;
+      top: 59vh;
+    }
+
+    .six {
+      width: 10vw;
+      left: 24vw;
+      top: 48vh;
     }
   }
 }

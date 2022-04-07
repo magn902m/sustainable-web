@@ -1,0 +1,18 @@
+#industry,
+#url {
+  background-color: #242424;
+  border: 0.5px solid #e9e3e3;
+  height: 2rem;
+  width: 15rem;
+  border-radius: 2rem;
+  color: white;
+}
+
+@media only screen and (min-width: 830px) {
+  #industry,
+  #url {
+    height: 2rem;
+    width: 20rem;
+    border-radius: 2rem;
+  }
+}
