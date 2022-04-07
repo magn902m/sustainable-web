@@ -26,15 +26,20 @@
       <section id="form_section">
         <article class="input border">
           <form>
-            <legend>
-              <h1>
-                HOW GREEN IS <br />
-                YOUR SITE?
-              </h1>
-            </legend>
+            <h1>
+              HOW GREEN IS <br />
+              YOUR SITE?
+            </h1>
+
             <div class="form_group">
               <label for="url">URL</label>
-              <input type="text" id="url" name="url" required />
+              <input
+                type="text"
+                id="url"
+                name="url"
+                pattern="^(https?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}/?$"
+                required
+              />
             </div>
             <div class="form_group">
               <label for="industry">INDUSTRY</label>
