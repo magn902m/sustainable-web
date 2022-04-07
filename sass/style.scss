@@ -110,30 +110,22 @@ main {
       display: flex;
       gap: 5rem;
 
-      .wrapper {
+      .bar {
         display: flex;
+        align-items: flex-end;
         justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
+        width: 4rem;
+        height: 30rem;
+        border-radius: 300px;
+        background: #242424;
+        box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
 
-        .bar {
-          display: flex;
-          align-items: flex-end;
-          justify-content: center;
-          width: 4rem;
-          height: 30rem;
+        .calculator {
+          width: 3rem;
+          height: 20rem;
+          background-color: base.$green;
           border-radius: 300px;
-          background: #242424;
-          box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
-
-          .calculator {
-            width: 3rem;
-            height: 20rem;
-            background-color: base.$green;
-            border-radius: 300px;
-            margin-bottom: 0.5rem;
-          }
+          margin-bottom: 0.5rem;
         }
       }
     }
