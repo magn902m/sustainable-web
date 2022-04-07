@@ -9,6 +9,7 @@ const endpoint = "https://frontend-54ac.restdb.io/rest/sustainable-web";
 
 window.addEventListener("DOMContentLoaded", setup);
 function setup() {
+  console.log("setup");
   regBtn();
   buildList();
   // console.log(buildList);
@@ -19,24 +20,50 @@ async function buildList() {
   const data = await get(endpoint, apikey);
   document.querySelector("#data_input_section").innerHTML = "";
   data.forEach(build);
-
-  const url = "https://www.facebook.com";
-  const getCarbonData = await getCarbonApi(url);
-  const getPageSpeedData = await getPageSpeedApi(url);
-  console.log("getCarbonData", getCarbonData, "getPageSpeedData", getPageSpeedData);
 }
 
 async function regBtn() {
   const form = document.querySelector("form");
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
-    // console.log(submitInput());
-    post(endpoint, apikey, submitInput());
+    const urlInput = form.elements.url.value;
+    const domain = urlInput.split(".")[0];
+
+    // const urlCarbon, urlPageSpeed = "https://www.facebook.com";
+    const urlCarbon = `./json/${domain}Carbon.json`;
+    const urlPageSpeed = `./json/${domain}PageSpeed.json`;
+
+    // console.log(urlCarbon);
+    // const getCarbonData = await getCarbonApi(urlCarbon);
+    // const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
+    // console.log("getCarbonData", getCarbonData);
+    // console.log("getPageSpeedData", getPageSpeedData);
+
+    console.log(urlCarbon);
+    const getCarbonData = await getCarbonApi(urlCarbon);
+    const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
+    console.log("getCarbonData", getCarbonData);
+    console.log("getPageSpeedData", getPageSpeedData);
+
+    combineData(getCarbonData, getPageSpeedData);
+    console.log(combineData(getCarbonData, getPageSpeedData));
+    // post(endpoint, apikey, submitInput());
+
     buildList();
 
     // window.location = `results.html?url=${payload.url}&industry=${payload.industry}`;
     // window.location = `print_data.html?url=${payload.url}&industry=${payload.industry}`;
-
-    buildList();
   });
+}
+
+function combineData(getCarbonData, getPageSpeedData) {
+  const fullObj = {
+    url: getCarbonData.url,
+    industry: getCarbonData.industry,
+    cleanerThan: getCarbonData.cleanerThan,
+    grams_co2: getCarbonData.grams_co2,
+    images: getPageSpeedData.images,
+  };
+
+  return fullObj;
 }
