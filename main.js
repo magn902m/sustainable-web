@@ -48,8 +48,8 @@ async function regBtn() {
       return fullObject;
     }
 
-    // const fullObject = await useJSONApi(urlInput);
-    const fullObject = await useApi(urlInput);
+    const fullObject = await useJSONApi(urlInput);
+    // const fullObject = await useApi(urlInput);
 
     console.log(fullObject);
     // post(endpoint, apikey, fullObject);
