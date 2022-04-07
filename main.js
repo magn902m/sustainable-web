@@ -11,14 +11,14 @@ window.addEventListener("DOMContentLoaded", setup);
 function setup() {
   console.log("setup");
   regBtn();
-  buildList();
+  // buildList();
   // console.log(buildList);
   // buildList();
 }
 
 async function buildList() {
   const data = await get(endpoint, apikey);
-  document.querySelector("#data_input_section").innerHTML = "";
+  document.querySelector(".result_wrapper").innerHTML = "";
   data.forEach(build);
 }
 
@@ -45,9 +45,10 @@ async function regBtn() {
     console.log("getCarbonData", getCarbonData);
     console.log("getPageSpeedData", getPageSpeedData);
 
-    combineData(getCarbonData, getPageSpeedData);
-    console.log(combineData(getCarbonData, getPageSpeedData));
+    const fullObject = combineData(getCarbonData, getPageSpeedData);
+    // console.log(combineData(getCarbonData, getPageSpeedData));
     // post(endpoint, apikey, submitInput());
+    // post(endpoint, apikey, fullObject);
 
     buildList();
 
@@ -61,6 +62,7 @@ function combineData(getCarbonData, getPageSpeedData) {
     url: getCarbonData.url,
     industry: getCarbonData.industry,
     cleanerThan: getCarbonData.cleanerThan,
+    green: getCarbonData.green,
     grams_co2: getCarbonData.grams_co2,
     images: getPageSpeedData.images,
   };
