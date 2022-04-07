@@ -2,7 +2,12 @@ img {
   width: 5rem;
 }
 
-.upper_leafs {
+#leafs {
+  position: absolute;
+  top: 0vh;
+  left: 1vw;
+  z-index: -10;
+
   .one {
     position: absolute;
     width: 13vw;
@@ -26,9 +31,6 @@ img {
     left: 62vw;
     top: 3vh;
   }
-}
-
-.lower_leafs {
   .four {
     position: absolute;
     width: 13vw;
@@ -55,7 +57,7 @@ img {
 }
 
 @media only screen and (min-width: 800px) {
-  .upper_leafs {
+  #leafs {
     .one {
       width: 10vw;
       left: 76vw;
@@ -73,9 +75,6 @@ img {
       left: 64vw;
       top: 1vh;
     }
-  }
-
-  .lower_leafs {
     .four {
       width: 10vw;
       left: 31vw;
@@ -97,7 +96,7 @@ img {
 }
 
 @media only screen and (min-width: 1200px) {
-  .upper_leafs {
+  #leafs {
     .one {
       width: 10vw;
       left: 65vw;
@@ -115,9 +114,7 @@ img {
       left: 55vw;
       top: 1vh;
     }
-  }
 
-  .lower_leafs {
     .four {
       width: 10vw;
       left: 37vw;
