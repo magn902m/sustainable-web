@@ -16,7 +16,7 @@ export async function getCarbonApi(url) {
 
     return cleanData;
   } else {
-    const carbonApi = `https://kea-alt-del.dk/websitecarbon/site/?url=https://${url}`;
+    const carbonApi = `https://kea-alt-del.dk/websitecarbon/site/?url=https://www.${url}`;
     const response = await fetch(carbonApi);
     const data = await response.json();
 
@@ -49,7 +49,7 @@ export async function getPageSpeedApi(url) {
     return cleanData;
   } else {
     const pageSpeedApi =
-      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://URLREPLACE&key=AIzaSyAeLQjn58Z5N3995NeAD_kN3VxXA92j-1M";
+      "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://www.URLREPLACE&key=AIzaSyAeLQjn58Z5N3995NeAD_kN3VxXA92j-1M";
 
     const pageSpeedURL = pageSpeedApi.replace("URLREPLACE", url);
     const response = await fetch(pageSpeedURL);
