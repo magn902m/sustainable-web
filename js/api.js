@@ -12,6 +12,7 @@ export async function getCarbonApi(url) {
     url: data.url,
     industry: industry.value,
     cleanerThan: data.cleanerThan * 100,
+    green: data.green,
     grams_co2: data.statistics.co2.grid.grams + data.statistics.co2.renewable.grams,
   };
 
