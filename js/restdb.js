@@ -28,7 +28,7 @@ export async function post(endpoint, apikey, payload) {
 
   const data = await respone.json();
   console.log(data);
-  return data;
+  // return data;
 }
 
 // DELETE
@@ -48,15 +48,6 @@ export async function deleteIt(endpoint, apikey, id) {
 // PUT
 
 export async function put(endpoint, apikey, id) {
-  // const dataObj = {
-  //   company: "Cool company",
-  //   industry: "Food",
-  //   url: "www.cool-food.com",
-  //   green: false,
-  //   cleanerThen: 0.6,
-  //   grams_co2: 0.3,
-  // };
-
   const respone = await fetch(`${endpoint}/${id}`, {
     method: "put",
     headers: {
