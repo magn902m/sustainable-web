@@ -1,0 +1,21 @@
+{
+  "url": "https://www.cphbusiness.dk/",
+  "green": "unknown",
+  "bytes": 776548,
+  "cleanerThan": 0.71,
+  "statistics": {
+    "adjustedBytes": 586293.74,
+    "energy": 0.000985581614729017,
+    "co2": {
+      "grid": {
+        "grams": 0.46815126699628307,
+        "litres": 0.26038573470333265
+      },
+      "renewable": {
+        "grams": 0.42427979661699816,
+        "litres": 0.2359844228783744
+      }
+    }
+  },
+  "timestamp": 1649317774
+}

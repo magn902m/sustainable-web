@@ -1,0 +1,21 @@
+{
+  "url": "https://www.youtube.com/",
+  "green": true,
+  "bytes": 3855511,
+  "cleanerThan": 0.22,
+  "statistics": {
+    "adjustedBytes": 2910910.805,
+    "energy": 0.00489334948642645,
+    "co2": {
+      "grid": {
+        "grams": 2.3243410060525638,
+        "litres": 1.2927984675664361
+      },
+      "renewable": {
+        "grams": 2.106521970225407,
+        "litres": 1.1716475198393714
+      }
+    }
+  },
+  "timestamp": 1649315474
+}

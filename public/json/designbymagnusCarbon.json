@@ -1,0 +1,21 @@
+{
+  "url": "https://designbymagnus.dk/",
+  "green": true,
+  "bytes": 344858,
+  "cleanerThan": 0.86,
+  "statistics": {
+    "adjustedBytes": 260367.79,
+    "energy": 0.00043768795295618475,
+    "co2": {
+      "grid": {
+        "grams": 0.20790177765418774,
+        "litres": 0.11563496873125922
+      },
+      "renewable": {
+        "grams": 0.18841885125162228,
+        "litres": 0.10479856506615232
+      }
+    }
+  },
+  "timestamp": 1649317155
+}
