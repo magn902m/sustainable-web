@@ -111,9 +111,10 @@ main {
       gap: 5rem;
 
       .bar {
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        display: inline-block;
+        width: 20px;
+        height: 150px;
+        padding: 0;
         width: 4rem;
         height: 30rem;
         border-radius: 300px;
@@ -121,11 +122,36 @@ main {
         box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
 
         .calculator {
-          width: 3rem;
-          height: 20rem;
-          background-color: base.$green;
+          width: 459px;
+          height: 40px;
+          margin: 0;
+          transform-origin: 242px 229px;
+          transform: rotate(-90deg);
+          -webkit-appearance: none;
+          background: base.$green;
+          outline: none;
+          border: none;
           border-radius: 300px;
-          margin-bottom: 0.5rem;
+        }
+
+        .calculator::-moz-range-thumb {
+          width: 10px;
+          height: 40px;
+          background: base.$grey;
+          cursor: pointer;
+          border: 5px solid base.$grey;
+          border-radius: 4px;
+        }
+
+        .calculator::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 10px;
+          height: 40px;
+          background: base.$grey;
+          cursor: pointer;
+          border: 5px solid base.$grey;
+          border-radius: 4px;
         }
       }
     }
