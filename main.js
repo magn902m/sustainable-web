@@ -27,18 +27,31 @@ async function regBtn() {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const urlInput = form.elements.url.value;
-    const domain = urlInput.split(".")[0];
+    console.log("urlInput", urlInput);
 
-    // const urlCarbon, urlPageSpeed = "https://www.facebook.com";
-    const urlCarbon = `./json/${domain}Carbon.json`;
-    const urlPageSpeed = `./json/${domain}PageSpeed.json`;
+    async function useJSONApi(urlInput) {
+      const domain = urlInput.split(".")[0];
+      const urlCarbon = `./json/${domain}Carbon.json`;
+      const urlPageSpeed = `./json/${domain}PageSpeed.json`;
+      const getCarbonData = await getCarbonApi(urlCarbon);
+      const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
+      const fullObject = combineData(getCarbonData, getPageSpeedData);
+      return fullObject;
+    }
 
-    const getCarbonData = await getCarbonApi(urlCarbon);
-    const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
+    async function useApi(urlInput) {
+      const urlCarbon = urlInput;
+      const urlPageSpeed = urlInput;
+      const getCarbonData = await getCarbonApi(urlCarbon);
+      const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
+      const fullObject = combineData(getCarbonData, getPageSpeedData);
+      return fullObject;
+    }
 
-    const fullObject = combineData(getCarbonData, getPageSpeedData);
+    // const fullObject = await useJSONApi(urlInput);
+    const fullObject = await useApi(urlInput);
+
     console.log(fullObject);
-    // post(endpoint, apikey, submitInput());
     // post(endpoint, apikey, fullObject);
 
     buildList();
