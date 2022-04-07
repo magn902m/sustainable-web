@@ -66,6 +66,7 @@ main {
   margin-top: 20rem;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   .first_section {
     margin-bottom: 2rem;
@@ -103,61 +104,69 @@ main {
     }
   }
 
-  .second_section {
+  .bars_wrapper {
     margin-top: 5rem;
     margin-bottom: 5rem;
     .bars {
       display: flex;
       gap: 5rem;
 
-      .bar {
-        display: inline-block;
-        width: 20px;
-        height: 150px;
-        padding: 0;
-        width: 4rem;
-        height: 30rem;
-        border-radius: 300px;
-        box-shadow: inset 6px 6px 12px #0e0e0e, inset -6px -6px 12px #3a3a3a;
+      .bar_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
 
-        .calculator {
-          width: 459px;
-          height: 40px;
-          margin: 0;
-          transform-origin: 242px 229px;
-          transform: rotate(-90deg);
-          -webkit-appearance: none;
-          outline: none;
-          border: none;
+        .bar {
+          display: inline-block;
+          width: 20px;
+          height: 150px;
+          padding: 0;
+          width: 4rem;
+          height: 30rem;
           border-radius: 300px;
-          background: linear-gradient(
-            0deg,
-            #749b60,
-            base.$green,
-            base.$green,
-            base.$green,
-            #749b60
-          );
-        }
+          box-shadow: inset 6px 6px 12px #0e0e0e, inset -6px -6px 12px #3a3a3a;
 
-        .calculator::-moz-range-thumb {
-          width: 10px;
-          height: 50px;
-          background: base.$grey;
-          cursor: pointer;
-          border: 5px solid base.$grey;
-          border-radius: 4px;
-        }
+          .calculator {
+            width: 459px;
+            height: 40px;
+            margin: 0;
+            transform-origin: 242px 229px;
+            transform: rotate(-90deg);
+            -webkit-appearance: none;
+            outline: none;
+            border: none;
+            border-radius: 300px;
+            background: linear-gradient(
+              0deg,
+              #749b60,
+              base.$green,
+              base.$green,
+              base.$green,
+              #749b60
+            );
+          }
 
-        .calculator::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 10px;
-          height: 40px;
-          background: base.$grey;
-          cursor: pointer;
-          border: 5px solid base.$grey;
-          border-radius: 4px;
+          .calculator::-moz-range-thumb {
+            width: 10px;
+            height: 50px;
+            background: base.$grey;
+            cursor: pointer;
+            border: 5px solid base.$grey;
+            border-radius: 4px;
+          }
+
+          .calculator::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 10px;
+            height: 40px;
+            background: base.$grey;
+            cursor: pointer;
+            border: 5px solid base.$grey;
+            border-radius: 4px;
+          }
         }
       }
     }

@@ -72,12 +72,13 @@
       </section>
 
       <template id="result_data">
+        <h1>RESULT</h1>
         <article class="result_wrapper">
           <section class="first_section">
             <div class="circle">
               <div class="green">
                 <div class="inner_circle">
-                  <h2 id="green" data-field="green">70%</h2>
+                  <h2 id="green" data-field="green"></h2>
                 </div>
               </div>
             </div>
@@ -91,56 +92,88 @@
       </template>
 
       <section id="result">
-        <h1>RESULT</h1>
         <article class="result_wrapper"></article>
-
-        <article class="second_section">
+        <article class="bars_wrapper">
           <div class="bars">
-            <div class="bar">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="calculator"
-                id="myCalculator"
-              />
+            <div class="bar_wrapper">
+              <div class="bar">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="calculator"
+                  id="myCalculator"
+                  oninput="rangevalue_1.value=value"
+                />
+              </div>
+              <h2>images</h2>
+              <output id="rangevalue_1">0</output>
             </div>
 
-            <div class="bar">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="calculator"
-                id="myCalculator"
-              />
+            <div class="bar_wrapper">
+              <div class="bar">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="calculator"
+                  id="myCalculator"
+                  oninput="rangevalue_2.value=value"
+                />
+              </div>
+              <h2>text</h2>
+              <output id="rangevalue_2">0</output>
             </div>
 
-            <div class="bar">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="calculator"
-                id="myCalculator"
-              />
+            <div class="bar_wrapper">
+              <div class="bar">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="calculator"
+                  id="myCalculator"
+                  oninput="rangevalue_3.value=value"
+                />
+              </div>
+              <h2>css</h2>
+              <output id="rangevalue_3">0</output>
             </div>
 
-            <div class="bar">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="calculator"
-                id="myCalculator"
-                oninput="this.nextElementSibling.value = this.value"
-              />
+            <div class="bar_wrapper">
+              <div class="bar">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="calculator"
+                  id="myCalculator"
+                  oninput="rangevalue_4.value=value"
+                />
+              </div>
+              <h2>html</h2>
+              <output id="rangevalue_4">0</output>
             </div>
-            <output>24</output>
+
+            <div class="bar_wrapper">
+              <div class="bar">
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="70"
+                  class="calculator"
+                  id="myCalculator"
+                  oninput="rangevalue_5.value=value"
+                />
+              </div>
+              <h2>java</h2>
+              <output id="rangevalue_5">0</output>
+            </div>
           </div>
         </article>
       </section>

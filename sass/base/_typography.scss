@@ -16,15 +16,19 @@ label {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#greener_than {
+output,
+h2,
+h4 {
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
-h3 {
+#greener_than {
   color: white;
   font-size: 3rem;
   font-family: Avenir, Helvetica, Arial, sans-serif;
