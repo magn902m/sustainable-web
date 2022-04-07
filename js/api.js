@@ -1,7 +1,7 @@
 // GET Carbon API
 
 export async function getCarbonApi(url) {
-  console.log(url);
+  // console.log(url);
   const carbonApi = `https://kea-alt-del.dk/websitecarbon/site/?url=https://${url}`;
 
   // const response = await fetch(carbonApi);
@@ -27,7 +27,7 @@ export async function getPageSpeedApi(url) {
 
   const pageSpeedURL = pageSpeedApi.replace("URLREPLACE", url);
 
-  console.log(url);
+  // console.log(url);
   // const response = await fetch(pageSpeedURL);
   const response = await fetch(url);
   const data = await response.json();
