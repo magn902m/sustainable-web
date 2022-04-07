@@ -27,3 +27,27 @@ export function combineData(getCarbonData, getPageSpeedData) {
 
   return fullObj;
 }
+
+export function httpsURL(urlInput) {
+  // console.log(urlInput);
+
+  if (urlInput.includes("https://") && urlInput.includes("www.")) {
+    return `${urlInput}`;
+  } else if (urlInput.includes("https://")) {
+    return `${urlInput}`;
+  } else {
+    return urlInput;
+  }
+}
+
+// export function httpsURL(urlInput) {
+//   console.log(urlInput);
+
+//   if (!urlInput.includes("https://") && !urlInput.includes("www.")) {
+//     return `https://www.${urlInput}`;
+//   } else if (!urlInput.includes("https://")) {
+//     return `https://${urlInput}`;
+//   } else {
+//     return urlInput;
+//   }
+// }
