@@ -137,8 +137,10 @@
                 value="50"
                 class="calculator"
                 id="myCalculator"
+                oninput="this.nextElementSibling.value = this.value"
               />
             </div>
+            <output>24</output>
           </div>
         </article>
       </section>
