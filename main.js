@@ -1,6 +1,6 @@
 import "./sass/style.scss";
 import { get, post, deleteIt, put } from "./js/restdb.js";
-// import { getCarbonApi } from "./js/api.js";
+import { getCarbonApi, getPageSpeedApi } from "./js/api.js";
 import { build } from "./js/portraying_data.js";
 import { submitInput } from "./js/collecting_data.js";
 
@@ -20,9 +20,10 @@ async function buildList() {
   document.querySelector("#data_input_section").innerHTML = "";
   data.forEach(build);
 
-  // const url = "https://www.facebook.com";
-  // const api = await getCarbonApi(url);
-  // console.log(api);
+  const url = "https://www.facebook.com";
+  const getCarbonData = await getCarbonApi(url);
+  const getPageSpeedData = await getPageSpeedApi(url);
+  console.log("getCarbonData", getCarbonData, "getPageSpeedData", getPageSpeedData);
 }
 
 async function regBtn() {
