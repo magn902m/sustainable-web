@@ -1,5 +1,7 @@
+@use "../base/colors";
+
 .loading {
-  background-color: grey;
+  background-color: colors.$grey;
   position: absolute;
   z-index: 100;
   top: 0;
@@ -17,7 +19,7 @@
   .bar {
     width: 20px;
     height: 150px;
-    background: white;
+    background: colors.$white;
     display: inline-block;
     transform-origin: bottom center;
     border-top-right-radius: 20px;
@@ -55,7 +57,7 @@
     }
     50% {
       transform: scaleY(1);
-      background: green;
+      background: colors.$green;
     }
     100% {
       transform: scaleY(0.1);

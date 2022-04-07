@@ -1,8 +1,10 @@
+@use "../base/colors";
+
 button {
   font-size: 1rem;
-  color: #ffffff;
+  color: colors.$grey;
   border-radius: 3rem;
-  background-color: #aad694;
+  background-color: colors.$green;
   padding: 1rem;
   border: none;
   margin-top: 3rem;
