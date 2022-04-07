@@ -14,3 +14,16 @@ export function build(item) {
   // append clone to list
   document.querySelector("#result .result_wrapper").appendChild(clone);
 }
+
+export function combineData(getCarbonData, getPageSpeedData) {
+  const fullObj = {
+    url: getCarbonData.url,
+    industry: getCarbonData.industry,
+    cleanerThan: getCarbonData.cleanerThan,
+    green: getCarbonData.green,
+    grams_co2: getCarbonData.grams_co2,
+    images: getPageSpeedData.images,
+  };
+
+  return fullObj;
+}
