@@ -1,48 +1,41 @@
 import "./sass/style.scss";
-import { get, getCarbonApi, post, deleteIt, put } from "./js/restdb.js";
+import { get, post, deleteIt, put } from "./js/restdb.js";
+// import { getCarbonApi } from "./js/api.js";
 import { build } from "./js/portraying_data.js";
-import { submitData } from "./js/collecting_data.js";
+import { submitInput } from "./js/collecting_data.js";
 
 const apikey = "6245613d67937c128d7c9394";
 const endpoint = "https://frontend-54ac.restdb.io/rest/sustainable-web";
 
 window.addEventListener("DOMContentLoaded", setup);
-
 function setup() {
   regBtn();
+  buildList();
+  // console.log(buildList);
   // buildList();
 }
 
 async function buildList() {
-  const database = await get(endpoint, apikey);
-  console.log(database);
-  build(database);
+  const data = await get(endpoint, apikey);
+  document.querySelector("#data_input_section").innerHTML = "";
+  data.forEach(build);
 
-  const url = "https://www.facebook.com";
-  const api = await getCarbonApi(url);
-  console.log(api);
+  // const url = "https://www.facebook.com";
+  // const api = await getCarbonApi(url);
+  // console.log(api);
 }
 
-// window.regBtn = regBtn;
 async function regBtn() {
-  const btnPost = document.querySelector("[type='submit']");
-
-  btnPost.addEventListener("submit", () => {
+  const form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const dataObj = submitData(obj);
-    post(endpoint, apikey, dataObj);
-    window.location = "results.html?id=";
+    // console.log(submitInput());
+    post(endpoint, apikey, submitInput());
+    buildList();
+
+    // window.location = `results.html?url=${payload.url}&industry=${payload.industry}`;
+    // window.location = `print_data.html?url=${payload.url}&industry=${payload.industry}`;
+
     buildList();
   });
-
-  // const btnPut = document.querySelector("#put");
-  // const btnDelete = document.querySelector("#delete");
-  // btnPut.addEventListener("click", () => {
-  //   put(endpoint, apikey);
-  //   buildList();
-  // });
-  // btnDelete.addEventListener("click", () => {
-  //   deleteIt(endpoint, apikey);
-  //   buildList();
-  // });
 }
