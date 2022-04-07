@@ -1,5 +1,7 @@
+@use "../base/colors";
+
 h1 {
-  color: white;
+  color: colors.$white;
   font-size: 2rem;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -8,7 +10,7 @@ h1 {
 }
 
 label {
-  color: white;
+  color: colors.$white;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
