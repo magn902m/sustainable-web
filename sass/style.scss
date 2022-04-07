@@ -118,8 +118,7 @@ main {
         width: 4rem;
         height: 30rem;
         border-radius: 300px;
-        background: #242424;
-        box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
+        box-shadow: inset 6px 6px 12px #0e0e0e, inset -6px -6px 12px #3a3a3a;
 
         .calculator {
           width: 459px;
@@ -128,15 +127,22 @@ main {
           transform-origin: 242px 229px;
           transform: rotate(-90deg);
           -webkit-appearance: none;
-          background: base.$green;
           outline: none;
           border: none;
           border-radius: 300px;
+          background: linear-gradient(
+            0deg,
+            #749b60,
+            base.$green,
+            base.$green,
+            base.$green,
+            #749b60
+          );
         }
 
         .calculator::-moz-range-thumb {
           width: 10px;
-          height: 40px;
+          height: 50px;
           background: base.$grey;
           cursor: pointer;
           border: 5px solid base.$grey;
