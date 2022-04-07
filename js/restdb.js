@@ -1,3 +1,5 @@
+// Restdb cheat sheet: https://restdb.io/media/restdb-cheat-sheet.pdf
+
 // GET
 
 export async function get(endpoint, apikey) {
@@ -21,7 +23,7 @@ export async function post(endpoint, apikey, payload) {
     method: "post",
     headers: {
       "x-apikey": apikey,
-      "Content-Type": "application/json",
+      "content-Type": "application/json",
     },
     body: JSON.stringify(payload),
   });
