@@ -1,4 +1,9 @@
 #leafs {
+  position: absolute;
+  top: 0vh;
+  left: 1vw;
+  z-index: -10;
+
   .one {
     position: absolute;
     width: 13vw;
@@ -67,7 +72,6 @@
       left: 64vw;
       top: 1vh;
     }
-
     .four {
       width: 10vw;
       left: 31vw;

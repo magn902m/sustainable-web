@@ -10,11 +10,14 @@ body {
   background-color: base.$grey;
 }
 
+main {
+  margin-top: 6rem;
+}
+
 #form_section {
-  position: absolute;
-  z-index: 10;
-  top: 10vh;
-  left: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   article {
     padding: 2rem;
@@ -36,9 +39,6 @@ body {
 
 @media only screen and (min-width: 800px) {
   #form_section {
-    top: 9vh;
-    left: 23vw;
-
     article {
       padding: 3rem;
 
@@ -55,9 +55,88 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
-  #form_section {
-    top: 16vh;
-    left: 30vw;
+  main {
+    margin-top: 8rem;
+  }
+}
+
+#result {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rem;
+  flex-direction: column;
+  align-items: center;
+
+  .first_section {
+    margin-bottom: 2rem;
+    .circle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30rem;
+      width: 30rem;
+      border-radius: 300px;
+      background: #242424;
+      box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
+
+      .green {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 22rem;
+        width: 22rem;
+        border-radius: 300px;
+        background: transparent;
+        border: 3rem solid base.$green;
+
+        .inner_circle {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 20rem;
+          width: 20rem;
+          border-radius: 300px;
+          background: #242424;
+          box-shadow: 13px 13px 18px #151515, -13px -13px 18px #333333;
+        }
+      }
+    }
+  }
+
+  .second_section {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    .bars {
+      display: flex;
+      gap: 5rem;
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .bar {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          width: 4rem;
+          height: 30rem;
+          border-radius: 300px;
+          background: #242424;
+          box-shadow: inset 13px 13px 18px #151515, inset -13px -13px 18px #333333;
+
+          .calculator {
+            width: 3rem;
+            height: 20rem;
+            background-color: base.$green;
+            border-radius: 300px;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
   }
 }
 
