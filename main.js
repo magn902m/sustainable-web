@@ -1,7 +1,7 @@
 import "./sass/style.scss";
 import { get, post, deleteIt, put } from "./js/restdb.js";
 import { getCarbonApi, getPageSpeedApi } from "./js/api.js";
-import { build } from "./js/portraying_data.js";
+import { build, combineData } from "./js/portraying_data.js";
 import { submitInput } from "./js/collecting_data.js";
 
 const apikey = "6245613d67937c128d7c9394";
@@ -33,20 +33,11 @@ async function regBtn() {
     const urlCarbon = `./json/${domain}Carbon.json`;
     const urlPageSpeed = `./json/${domain}PageSpeed.json`;
 
-    // console.log(urlCarbon);
-    // const getCarbonData = await getCarbonApi(urlCarbon);
-    // const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
-    // console.log("getCarbonData", getCarbonData);
-    // console.log("getPageSpeedData", getPageSpeedData);
-
-    console.log(urlCarbon);
     const getCarbonData = await getCarbonApi(urlCarbon);
     const getPageSpeedData = await getPageSpeedApi(urlPageSpeed);
-    console.log("getCarbonData", getCarbonData);
-    console.log("getPageSpeedData", getPageSpeedData);
 
     const fullObject = combineData(getCarbonData, getPageSpeedData);
-    // console.log(combineData(getCarbonData, getPageSpeedData));
+    console.log(fullObject);
     // post(endpoint, apikey, submitInput());
     // post(endpoint, apikey, fullObject);
 
@@ -55,17 +46,4 @@ async function regBtn() {
     // window.location = `results.html?url=${payload.url}&industry=${payload.industry}`;
     // window.location = `print_data.html?url=${payload.url}&industry=${payload.industry}`;
   });
-}
-
-function combineData(getCarbonData, getPageSpeedData) {
-  const fullObj = {
-    url: getCarbonData.url,
-    industry: getCarbonData.industry,
-    cleanerThan: getCarbonData.cleanerThan,
-    green: getCarbonData.green,
-    grams_co2: getCarbonData.grams_co2,
-    images: getPageSpeedData.images,
-  };
-
-  return fullObj;
 }
