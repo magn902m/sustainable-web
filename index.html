@@ -83,17 +83,104 @@
               </div>
             </div>
           </section>
-          <h4 data-field="url">url</h4>
-          <h4 data-field="cleanerThan">url</h4>
-          <h4 data-field="industry">industry</h4>
-          <h4 data-field="grams_co2">grams_co2</h4>
-          <h4 data-field="images">images</h4>
+
+          <section class="second_section">
+            <h4 data-field="url">url</h4>
+            <h4 data-field="cleanerThan">url</h4>
+            <h4 data-field="industry">industry</h4>
+            <h4 data-field="grams_co2">grams_co2</h4>
+            <h4 data-field="images">images</h4>
+          </section>
+
+          <section class="third_section">
+            <div class="bars">
+              <div class="bar_wrapper">
+                <div class="bar">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="70"
+                    class="calculator"
+                    id="myCalculator"
+                    oninput="rangevalue_1.value=value"
+                  />
+                </div>
+                <h2>images</h2>
+                <output id="rangevalue_1">0</output>
+              </div>
+
+              <div class="bar_wrapper">
+                <div class="bar">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="70"
+                    class="calculator"
+                    id="myCalculator"
+                    oninput="rangevalue_2.value=value"
+                  />
+                </div>
+                <h2>text</h2>
+                <output id="rangevalue_2">0</output>
+              </div>
+
+              <div class="bar_wrapper">
+                <div class="bar">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="70"
+                    class="calculator"
+                    id="myCalculator"
+                    oninput="rangevalue_3.value=value"
+                  />
+                </div>
+                <h2>css</h2>
+                <output id="rangevalue_3">0</output>
+              </div>
+
+              <div class="bar_wrapper">
+                <div class="bar">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="70"
+                    class="calculator"
+                    id="myCalculator"
+                    oninput="rangevalue_4.value=value"
+                  />
+                </div>
+                <h2>html</h2>
+                <output id="rangevalue_4">0</output>
+              </div>
+
+              <div class="bar_wrapper">
+                <div class="bar">
+                  <input
+                    type="range"
+                    min="1"
+                    max="100"
+                    value="70"
+                    class="calculator"
+                    id="myCalculator"
+                    oninput="rangevalue_5.value=value"
+                  />
+                </div>
+                <h2>java</h2>
+                <output id="rangevalue_5">0</output>
+              </div>
+            </div>
+          </section>
         </article>
       </template>
 
       <section id="result">
         <article class="result_wrapper"></article>
-        <article class="bars_wrapper">
+        <!-- <article class="bars_wrapper">
           <div class="bars">
             <div class="bar_wrapper">
               <div class="bar">
@@ -175,7 +262,7 @@
               <output id="rangevalue_5">0</output>
             </div>
           </div>
-        </article>
+        </article> -->
       </section>
     </main>
     <script type="module" src="/main.js"></script>
