@@ -162,9 +162,9 @@ main {
             .calculator::-moz-range-thumb {
               width: 10px;
               height: 50px;
-              background: base.$grey;
+              background: hotpink;
               cursor: pointer;
-              border: 5px solid base.$grey;
+              border: 5px solid hotpink;
               border-radius: 4px;
             }
 
@@ -173,9 +173,9 @@ main {
               appearance: none;
               width: 10px;
               height: 40px;
-              background: base.$grey;
+              background: hotpink;
               cursor: pointer;
-              border: 5px solid base.$grey;
+              border: 5px solid hotpink;
               border-radius: 4px;
             }
           }
