@@ -1,7 +1,8 @@
 import "./sass/style.scss";
 import { get, post, deleteIt, put } from "./js/restdb.js";
 import { getCarbonApi, getPageSpeedApi } from "./js/api.js";
-import { build, combineData, httpsURL } from "./js/portraying_data.js";
+import { build, combineData, httpsURL, setGaugeValue } from "./js/portraying_data.js";
+// import { setGaugeValue } from "./js/result.js";
 // import { submitInput } from "./js/collecting_data.js";
 
 const apikey = "6245613d67937c128d7c9394";
@@ -15,12 +16,13 @@ function setup() {
   // buildList();
 }
 
-async function buildList() {
+async function buildList(cleanValue) {
   const data = await get(endpoint, apikey);
   const firstObject = data[0];
   document.querySelector(".result_wrapper").innerHTML = "";
   // data.forEach(build);
   build(firstObject);
+  setGaugeValue(cleanValue);
 }
 
 async function regBtn() {
@@ -53,7 +55,9 @@ async function regBtn() {
 
     //* useJSONApi *
     const fullObject = await useJSONApi(urlInput);
-    buildList();
+    let cleanValue = fullObject.cleanerThan;
+    console.log(cleanValue);
+    buildList(cleanValue);
 
     // //* useApi *
     // const fullObject = await useApi(urlInput);

@@ -40,6 +40,20 @@ export function httpsURL(urlInput) {
   }
 }
 
+export function setGaugeValue(cleanValue) {
+  cleanValue = 54;
+  console.log(cleanValue);
+
+  if (cleanValue < 0 || cleanValue > 100) {
+    return;
+  }
+  const gauge = document.querySelector(".gauge");
+    gauge.querySelector("[data-field=cleanerThan]").textContent = cleanValue, "%";
+    gauge.querySelector(".gauge__fill").style.transform = `rotate(${cleanValue/20}turn)`;
+
+    // gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
+} 
+
 // export function httpsURL(urlInput) {
 //   console.log(urlInput);
 

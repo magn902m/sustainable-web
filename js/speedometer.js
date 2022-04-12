@@ -1,6 +1,9 @@
+
+exports.setGaugeValue = setGaugeValue;
+
 const gaugeElement = document.querySelector(".gauge");
 
-function setGaugeValue(gauge, value) {
+export function setGaugeValue(gauge, value) {
   if (value < 0 || value > 1) {
     return;
   }
@@ -13,4 +16,4 @@ function setGaugeValue(gauge, value) {
   )}%`;
 }
 
-setGaugeValue(gaugeElement, 0.5);
+setGaugeValue(gaugeElement, 0.75);
