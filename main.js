@@ -1,7 +1,13 @@
 import "./sass/style.scss";
 import { get, post, deleteIt, put } from "./js/restdb.js";
 import { getCarbonApi, getPageSpeedApi } from "./js/api.js";
-import { build, combineData, httpsURL, setGaugeValue } from "./js/portraying_data.js";
+import {
+  build,
+  combineData,
+  httpsURL,
+  setGaugeValue,
+  regBtnChangeData,
+} from "./js/portraying_data.js";
 // import { setGaugeValue } from "./js/result.js";
 // import { submitInput } from "./js/collecting_data.js";
 
@@ -23,6 +29,7 @@ async function buildList(cleanValue) {
   // data.forEach(build);
   build(firstObject);
   setGaugeValue(cleanValue);
+  regBtnChangeData();
 }
 
 async function regBtn() {

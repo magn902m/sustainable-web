@@ -38,30 +38,56 @@ export function httpsURL(urlInput) {
   } else {
     return urlInput;
   }
+
+  // export function httpsURL(urlInput) {
+  //   console.log(urlInput);
+
+  //   if (!urlInput.includes("https://") && !urlInput.includes("www.")) {
+  //     return `https://www.${urlInput}`;
+  //   } else if (!urlInput.includes("https://")) {
+  //     return `https://${urlInput}`;
+  //   } else {
+  //     return urlInput;
+  //   }
+  // }
 }
 
 export function setGaugeValue(cleanValue) {
-  cleanValue = 54;
-  console.log(cleanValue);
+  // cleanValue = 57;
+  // console.log(cleanValue);
 
   if (cleanValue < 0 || cleanValue > 100) {
     return;
   }
   const gauge = document.querySelector(".gauge");
-    gauge.querySelector("[data-field=cleanerThan]").textContent = cleanValue, "%";
-    gauge.querySelector(".gauge__fill").style.transform = `rotate(${cleanValue/20}turn)`;
+  gauge.querySelector("[data-field=cleanerThan]").textContent = `${cleanValue} %`;
+  gauge.querySelector(".gauge__fill").style.transform = `rotate(${cleanValue / 20}turn)`;
+}
 
-    // gauge.querySelector(".gauge__fill").style.transform = `rotate(${value / 2}turn)`;
-} 
+export function regBtnChangeData() {
+  const bar1 = document.querySelector("#myCalculator_1");
+  const bar1Output = document.querySelector("#rangevalue_1");
 
-// export function httpsURL(urlInput) {
-//   console.log(urlInput);
+  //Taking the string, and converting it to a number
+  const stringNum = bar1Output.textContent.substring(0, bar1Output.textContent.lastIndexOf(" "));
+  bar1Output.textContent = stringNum;
+  const realNum = Math.floor(stringNum);
 
-//   if (!urlInput.includes("https://") && !urlInput.includes("www.")) {
-//     return `https://www.${urlInput}`;
-//   } else if (!urlInput.includes("https://")) {
-//     return `https://${urlInput}`;
-//   } else {
-//     return urlInput;
-//   }
-// }
+  //Setting the max and value to the number from the api´s
+  bar1.max = realNum;
+  bar1.value = realNum;
+
+  // bar1.target.value
+
+  bar1.addEventListener("change", (e) => {
+    console.log(e.target.value, "images selected");
+    const bar1Value = bar1.value;
+    const gauge = document.querySelector(".gauge");
+
+    //
+    gauge.querySelector("[data-field=cleanerThan]").textContent = `${bar1Value} %`;
+    gauge.querySelector(".gauge__fill").style.transform = `rotate(${bar1Value / 20}turn)`;
+
+    // bar1Output.textContent = bar1.value;
+  });
+}
