@@ -7,7 +7,14 @@ export function build(item) {
   clone.querySelector("[data-field=url]").textContent = item.url;
   clone.querySelector("[data-field=industry]").textContent = `${item.industry}`;
   clone.querySelector("[data-field=cleanerThan]").textContent = `${item.cleanerThan}`;
+
+  if (item.green === "unknown" || item.green === false) {
+    item.green = "not green";
+  } else if (item.green === true) {
+    item.green = "green";
+  }
   clone.querySelector("[data-field=green]").textContent = `${item.green}`;
+
   clone.querySelector("[data-field=grams_co2]").textContent = `${item.grams_co2} grams`;
   clone.querySelector("[data-field=images]").textContent = `${item.images} Images`;
 
