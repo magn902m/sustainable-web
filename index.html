@@ -74,7 +74,7 @@
       <template id="result_data">
         <h1>RESULT</h1>
         <article class="result_wrapper">
-          <section class="first_section">
+          <!-- <section class="first_section">
             <div class="circle">
               <div class="green">
                 <div class="inner_circle">
@@ -82,20 +82,23 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
           <div class="gauge">
             <div class="gauge__body">
               <div class="gauge__fill"></div>
-              <div class="gauge__cover"><h4 data-field="cleanerThan">%</h4></div>
+              <div class="gauge__cover">
+                <h4 data-field="cleanerThan">%</h4>
+              </div>
             </div>
+            <h3>cleaner than other sites</h3>
           </div>
 
           <section class="second_section">
-            <h4 data-field="url">url</h4>
-            <!-- <h4 data-field="cleanerThan">url</h4> -->
-            <h4 data-field="industry">industry</h4>
-            <h4 data-field="grams_co2">grams_co2</h4>
+            <h2 id="green">The site is: <span data-field="green"></span></h2>
+            <h4>url: <span data-field="url"></span></h4>
+            <h4>Industry: <span data-field="industry"></span></h4>
+            <h4>CO2 emitted: <span data-field="grams_co2"></span></h4>
             <!-- <h4 data-field="images">images</h4> -->
           </section>
 
@@ -123,14 +126,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="14"
                     class="calculator"
                     id="myCalculator_2"
                     oninput="rangevalue_2.value=value"
                   />
                 </div>
                 <h2>text</h2>
-                <output id="rangevalue_2">0</output>
+                <output id="rangevalue_2">14</output>
               </div>
 
               <div class="bar_wrapper">
@@ -146,7 +149,7 @@
                   />
                 </div>
                 <h2>css</h2>
-                <output id="rangevalue_3">0</output>
+                <output id="rangevalue_3">70</output>
               </div>
 
               <div class="bar_wrapper">
@@ -155,14 +158,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="89"
                     class="calculator"
                     id="myCalculator_4"
                     oninput="rangevalue_4.value=value"
                   />
                 </div>
                 <h2>html</h2>
-                <output id="rangevalue_4">0</output>
+                <output id="rangevalue_4">89</output>
               </div>
 
               <div class="bar_wrapper">
@@ -171,14 +174,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="35"
                     class="calculator"
                     id="myCalculator_5"
                     oninput="rangevalue_5.value=value"
                   />
                 </div>
                 <h2>java</h2>
-                <output id="rangevalue_5">0</output>
+                <output id="rangevalue_5">35</output>
               </div>
             </div>
           </section>
