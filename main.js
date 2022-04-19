@@ -27,8 +27,8 @@ async function buildList(cleanValue) {
   const data = await get(endpoint, apikey);
   const firstObject = data[0];
   document.querySelector(".result_wrapper").innerHTML = "";
-  // data.forEach(build);
-  build(firstObject);
+  data.forEach(build);
+  // build(firstObject);
   setGaugeValue(cleanValue);
   regBtnChangeData();
 }
@@ -61,11 +61,17 @@ async function regBtn() {
       return fullObject;
     }
 
-    //* useJSONApi *
-    const fullObject = await useJSONApi(urlInput);
-    let cleanValue = fullObject.cleanerThan;
-    console.log(cleanValue);
-    buildList(cleanValue);
+    // //* useJSONApi *
+    // const fullObject = await useJSONApi(urlInput);
+    // let cleanValue = fullObject.cleanerThan;
+    // console.log(cleanValue);
+    // buildList(cleanValue);
+
+    //* useApi *
+    const fullObject = await useApi(urlInput);
+    console.log(fullObject, "ready to post");
+    post(endpoint, apikey, fullObject);
+    buildList();
 
     const loadingPage = document.querySelector(".loading");
     loadingPage.classList.remove("hide");
@@ -73,12 +79,6 @@ async function regBtn() {
       loadingPage.classList.add("hide");
       window.scrollBy(0, 1000);
     }, 2500);
-
-    // //* useApi *
-    // const fullObject = await useApi(urlInput);
-    // console.log(fullObject, "ready to post");
-    // post(endpoint, apikey, fullObject);
-    // buildList();
 
     // window.location = `results.html?url=${payload.url}&industry=${payload.industry}`;
     // window.location = `print_data.html?url=${payload.url}&industry=${payload.industry}`;
