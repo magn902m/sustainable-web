@@ -8,7 +8,7 @@ import {
   setGaugeValue,
   regBtnChangeData,
 } from "./js/portraying_data.js";
-import { toggle } from "./js/footer-toggle";
+// import { toggle } from "./js/footer-toggle";
 // import { setGaugeValue } from "./js/result.js";
 // import { submitInput } from "./js/collecting_data.js";
 
@@ -66,6 +66,13 @@ async function regBtn() {
     let cleanValue = fullObject.cleanerThan;
     console.log(cleanValue);
     buildList(cleanValue);
+
+    const loadingPage = document.querySelector(".loading");
+    loadingPage.classList.remove("hide");
+    setTimeout(() => {
+      loadingPage.classList.add("hide");
+      window.scrollBy(0, 1000);
+    }, 2500);
 
     // //* useApi *
     // const fullObject = await useApi(urlInput);

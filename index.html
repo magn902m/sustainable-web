@@ -45,16 +45,16 @@
               <label for="industry">INDUSTRY</label>
               <select name="industry" id="industry" required>
                 <option value="none"></option>
-                <option value="land">Landbrug/Fødevareproduktion</option>
-                <option value="finans">Den finansielle sektor</option>
-                <option value="mode">Tøj- og modebranchen</option>
-                <option value="tech">Tech- og databranchen</option>
-                <option value="byg">Bygge- og anlægsbranchen</option>
-                <option value="trans">Transportsektoren</option>
-                <option value="kult">Kultur, sport og underholdningsbranche</option>
-                <option value="hotel">Hotel- og restaurationsbranchen</option>
-                <option value="energi">Energisektoren</option>
-                <option value="dag">Dagligvarehandlen</option>
+                <option value="land">Agriculture / Food Production</option>
+                <option value="finans">Financial sector</option>
+                <option value="mode">Clothing and fashion industry</option>
+                <option value="tech">Tech and computer industry</option>
+                <option value="byg">Construction industry</option>
+                <option value="trans">Transport sector</option>
+                <option value="kult">Culture, sports and entertainment industry</option>
+                <option value="hotel">Hotel and restaurant industry</option>
+                <option value="energi">Energy sector</option>
+                <option value="dag">Supermarket / Grocery stores</option>
               </select>
             </div>
             <button type="submit">CALCULATE</button>
@@ -74,20 +74,34 @@
       <template id="result_data">
         <h1>RESULT</h1>
         <article class="result_wrapper">
+          <section class="second_section">
+            <h2 id="green"><strong>Your site is:</strong><br /><span data-field="green"></span></h2>
+            <h4><strong>url</strong><br /><span data-field="url"></span></h4>
+            <h4><strong>Industry</strong><br /><span data-field="industry"></span></h4>
+            <h4><strong>CO2 emitted</strong><br /><span data-field="grams_co2"></span></h4>
+            <!-- <h4 data-field="images">images</h4> -->
+          </section>
+
+          <!-- Circle -->
+          <!-- <section class="first_section">
+            <div class="circle">
+              <div class="green">
+                <div class="inner_circle">
+                  <h2 id="green" data-field="green"></h2>
+                </div>
+              </div>
+            </div>
+          </section> -->
+
           <div class="gauge">
             <div class="gauge__body">
               <div class="gauge__fill"></div>
-              <div class="gauge__cover"><h4 data-field="cleanerThan">%</h4></div>
+              <div class="gauge__cover">
+                <h4 data-field="cleanerThan">%</h4>
+              </div>
             </div>
+            <p>CLEANER THAN OTHER SITES</p>
           </div>
-
-          <section class="second_section">
-            <h4 data-field="url">url</h4>
-            <!-- <h4 data-field="cleanerThan">url</h4> -->
-            <h4 data-field="industry">industry</h4>
-            <h4 data-field="grams_co2">grams_co2</h4>
-            <!-- <h4 data-field="images">images</h4> -->
-          </section>
 
           <section class="third_section">
             <div class="bars">
@@ -113,14 +127,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="14"
                     class="calculator"
                     id="myCalculator_2"
                     oninput="rangevalue_2.value=value"
                   />
                 </div>
                 <h2>text</h2>
-                <output id="rangevalue_2">0</output>
+                <output id="rangevalue_2">14</output>
               </div>
 
               <div class="bar_wrapper">
@@ -136,7 +150,7 @@
                   />
                 </div>
                 <h2>css</h2>
-                <output id="rangevalue_3">0</output>
+                <output id="rangevalue_3">70</output>
               </div>
 
               <div class="bar_wrapper">
@@ -145,14 +159,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="89"
                     class="calculator"
                     id="myCalculator_4"
                     oninput="rangevalue_4.value=value"
                   />
                 </div>
                 <h2>html</h2>
-                <output id="rangevalue_4">0</output>
+                <output id="rangevalue_4">89</output>
               </div>
 
               <div class="bar_wrapper">
@@ -161,14 +175,14 @@
                     type="range"
                     min="1"
                     max="100"
-                    value="70"
+                    value="35"
                     class="calculator"
                     id="myCalculator_5"
                     oninput="rangevalue_5.value=value"
                   />
                 </div>
                 <h2>java</h2>
-                <output id="rangevalue_5">0</output>
+                <output id="rangevalue_5">35</output>
               </div>
             </div>
           </section>
