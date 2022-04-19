@@ -9,9 +9,9 @@ export function build(item) {
   clone.querySelector("[data-field=cleanerThan]").textContent = `${item.cleanerThan}`;
 
   if (item.green === "unknown" || item.green === false) {
-    item.green = "not green";
+    item.green = "not green ❌";
   } else if (item.green === true) {
-    item.green = "green";
+    item.green = "green ✅";
   }
   clone.querySelector("[data-field=green]").textContent = `${item.green}`;
 
