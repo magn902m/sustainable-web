@@ -66,6 +66,13 @@ async function regBtn() {
     console.log(cleanValue);
     buildList(cleanValue);
 
+    const loadingPage = document.querySelector(".loading");
+    loadingPage.classList.remove("hide");
+    setTimeout(() => {
+      loadingPage.classList.add("hide");
+      window.scrollBy(0, 1000);
+    }, 2500);
+
     // //* useApi *
     // const fullObject = await useApi(urlInput);
     // console.log(fullObject, "ready to post");
