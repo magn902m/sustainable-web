@@ -8,6 +8,7 @@ import {
   setGaugeValue,
   regBtnChangeData,
 } from "./js/portraying_data.js";
+import { toggle } from "./js/footer-toggle";
 // import { setGaugeValue } from "./js/result.js";
 // import { submitInput } from "./js/collecting_data.js";
 

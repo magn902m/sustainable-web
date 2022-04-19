@@ -1,0 +1,31 @@
+@use "../base/colors";
+
+footer{
+    display: flex;
+    margin-top: 3rem;
+    padding: 5vh 2rem;
+    align-items: top;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: colors.$lightgrey;
+    color: white;
+    h3{
+        color: colors.$lightergrey;
+    }
+    section{
+        display: flex;
+        gap: 1rem;
+    } 
+    ul{
+        padding: 0%;
+        list-style: none;
+        
+        a{
+            text-decoration: none;
+            color: white;
+            a:hover{
+                opacity: 80%;
+            }
+        }
+    }
+}
